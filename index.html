@@ -24,13 +24,17 @@
             <div class="diskboxs_container">
                 <div v-for="diskbox in diskBoxes" class="diskbox lightblue">
                     <div class="poster">
-                        <img src="" alt="">
+                        <img :src="diskbox.poster" alt="">
                     </div>
                     <div class="title">
-                        <p>{{ diskbox }}</p>
+                        <h2>{{diskbox.title}}</h2>
                     </div>
-                    <div class="author"></div>
-                    <div class="year"></div>
+                    <div class="author">
+                        <p>{{diskbox.author}}</p>
+                    </div>
+                    <div class="year">
+                        <p>{{diskbox.year}}</p>
+                    </div>
                 </div>
             </div>
 

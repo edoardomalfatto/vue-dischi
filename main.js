@@ -9,9 +9,9 @@ var root = new Vue({
         addMessage: function() {},
         answerMessage: function() {}
     },
-    created() {
+    mounted() {
         axios.get('https://flynn.boolean.careers/exercises/api/array/music')
-            .then(function(response) {
+            .then((response) => {
                 console.log(1, this.diskBoxes)
                 this.diskBoxes = response.data.response;
                 console.log(2, this.diskBoxes)
