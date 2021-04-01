@@ -20,11 +20,95 @@
             <div class="logo">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/1024px-Spotify_logo_without_text.svg.png" alt="Spotify Logo" srcset="">
             </div>
+            <select v-model="selectedGenere" id="for_genere">
+                <option value="All">All</option>
+                <option v-for="genere in aviableGeneres" :value="genere">{{genere}}</option>
+              </select>
         </header>
 
         <main class="darkblue">
-            <div class="diskboxs_container">
+            <div v-if="selectedGenere == All" class="diskboxs_container">
                 <div v-for="diskbox in diskBoxes" class="diskbox lightblue">
+                    <div class="poster">
+                        <img :src="diskbox.poster" alt="">
+                    </div>
+                    <div class="description">
+                        <div class="title">
+                            <h2>{{diskbox.title}}</h2>
+                        </div>
+                        <div class="author little_text">
+                            <p>{{diskbox.author}}</p>
+                        </div>
+                        <div class="year little_text">
+                            <p>{{diskbox.year}}</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div v-if="selectedGenere == Rock" class="diskboxs_container">
+                <div v-for="diskbox in rockDiskBoxes" class="diskbox lightblue">
+                    <div class="poster">
+                        <img :src="diskbox.poster" alt="">
+                    </div>
+                    <div class="description">
+                        <div class="title">
+                            <h2>{{diskbox.title}}</h2>
+                        </div>
+                        <div class="author little_text">
+                            <p>{{diskbox.author}}</p>
+                        </div>
+                        <div class="year little_text">
+                            <p>{{diskbox.year}}</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div v-if="selectedGenere == Jazz" class="diskboxs_container">
+                <div v-for="diskbox in jazzDiskBoxes" class="diskbox lightblue">
+                    <div class="poster">
+                        <img :src="diskbox.poster" alt="">
+                    </div>
+                    <div class="description">
+                        <div class="title">
+                            <h2>{{diskbox.title}}</h2>
+                        </div>
+                        <div class="author little_text">
+                            <p>{{diskbox.author}}</p>
+                        </div>
+                        <div class="year little_text">
+                            <p>{{diskbox.year}}</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div v-if="selectedGenere == Metal" class="diskboxs_container">
+                <div v-for="diskbox in metalDiskBoxes" class="diskbox lightblue">
+                    <div class="poster">
+                        <img :src="diskbox.poster" alt="">
+                    </div>
+                    <div class="description">
+                        <div class="title">
+                            <h2>{{diskbox.title}}</h2>
+                        </div>
+                        <div class="author little_text">
+                            <p>{{diskbox.author}}</p>
+                        </div>
+                        <div class="year little_text">
+                            <p>{{diskbox.year}}</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div v-if="selectedGenere == Pop" class="diskboxs_container">
+                <div v-for="diskbox in popDiskBoxes" class="diskbox lightblue">
                     <div class="poster">
                         <img :src="diskbox.poster" alt="">
                     </div>
