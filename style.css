@@ -1,74 +1,74 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 10px;
-}
-
-.lightblue {
-    background-color: rgb(46, 58, 70);
-}
-
-.darkblue {
-    background-color: rgb(30, 45, 59);
-}
-
-header {
-    height: 10vh;
-}
-
-header .logo {
-    height: 100%;
-}
-
-header .logo img {
-    height: 100%;
-    padding: 10px;
-}
-
-main {
-    width: 100%;
-    height: 100%;
-    min-height: 90vh;
-}
-
-main .diskboxs_container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-top: 10vh;
-}
-
-.diskbox {
-    width: 15%;
-    padding: 10px;
-    margin: 10px;
-}
-
-.diskbox .poster {
-    width: 100%;
-}
-
-.diskbox .poster img {
-    width: 100%;
-}
-
-.description {
-    text-align: center;
-    padding-top: 10px;
-}
-
-.description .title h2 {
-    text-transform: uppercase;
-    color: white;
-}
-
-.little_text {
-    font-size: 80%;
-    color: lightgray;
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+} 
+ 
+body { 
+    font-family: 'Roboto', sans-serif; 
+    font-size: 10px; 
+} 
+ 
+.lightblue { 
+    background-color: rgb(46, 58, 70); 
+} 
+ 
+.darkblue { 
+    background-color: rgb(30, 45, 59); 
+} 
+ 
+header { 
+    height: 10vh; 
+} 
+ 
+header .logo { 
+    height: 100%; 
+} 
+ 
+header .logo img { 
+    height: 100%; 
+    padding: 10px; 
+} 
+ 
+main { 
+    width: 100%; 
+    height: 100%; 
+    min-height: 90vh; 
+} 
+ 
+main .diskboxs_container { 
+    width: 100%; 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    padding-top: 10vh; 
+} 
+ 
+.diskbox { 
+    width: 15%; 
+    padding: 10px; 
+    margin: 10px; 
+} 
+ 
+.diskbox .poster { 
+    width: 100%; 
+} 
+ 
+.diskbox .poster img { 
+    width: 100%; 
+} 
+ 
+.description { 
+    text-align: center; 
+    padding-top: 10px; 
+} 
+ 
+.description .title h2 { 
+    text-transform: uppercase; 
+    color: white; 
+} 
+ 
+.little_text { 
+    font-size: 80%; 
+    color: lightgray; 
 }

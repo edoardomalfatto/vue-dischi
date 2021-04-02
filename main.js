@@ -3,6 +3,7 @@ Vue.config.devtools = true;
 var root = new Vue({
     el: '#app',
     data: {
+        sorted: false,
         All: "All",
         Rock: "Rock",
         Jazz: "Jazz",
@@ -17,8 +18,81 @@ var root = new Vue({
         aviableGeneres: []
     },
     methods: {
-        addMessage: function() {},
-        answerMessage: function() {}
+        sortDiskBoxes: function() {
+            const correctThis = this;
+            switch (this.selectedGenere) {
+                case "All":
+                    if (this.sorted == false) {
+                        this.diskBoxes.sort(function(a, b) {
+                            correctThis.sorted = true;
+                            return a.year - b.year;
+                        });
+                    } else {
+                        console.log(this.diskBoxes);
+                        this.diskBoxes.sort(function(a, b) {
+                            correctThis.sorted = false;
+                            return b.year - a.year;
+                        });
+                    }
+                    break;
+                case "Rock":
+                    if (this.sorted == false) {
+                        this.rockDiskBoxes.sort(function(a, b) {
+                            correctThis.sorted = true;
+                            return a.year - b.year;
+                        });
+                    } else {
+                        console.log(this.diskBoxes);
+                        this.rockDiskBoxes.sort(function(a, b) {
+                            correctThis.sorted = false;
+                            return b.year - a.year;
+                        });
+                    }
+                    break;
+                case "Jazz":
+                    if (this.sorted == false) {
+                        this.jazzDiskBoxes.sort(function(a, b) {
+                            correctThis.sorted = true;
+                            return a.year - b.year;
+                        });
+                    } else {
+                        console.log(this.diskBoxes);
+                        this.jazzDiskBoxes.sort(function(a, b) {
+                            correctThis.sorted = false;
+                            return b.year - a.year;
+                        });
+                    }
+                    break;
+                case "Metal":
+                    if (this.sorted == false) {
+                        this.metalDiskBoxes.sort(function(a, b) {
+                            correctThis.sorted = true;
+                            return a.year - b.year;
+                        });
+                    } else {
+                        console.log(this.diskBoxes);
+                        this.metalDiskBoxes.sort(function(a, b) {
+                            correctThis.sorted = false;
+                            return b.year - a.year;
+                        });
+                    }
+                    break;
+                case "Pop":
+                    if (this.sorted == false) {
+                        this.popDiskBoxes.sort(function(a, b) {
+                            correctThis.sorted = true;
+                            return a.year - b.year;
+                        });
+                    } else {
+                        console.log(this.diskBoxes);
+                        this.popDiskBoxes.sort(function(a, b) {
+                            correctThis.sorted = false;
+                            return b.year - a.year;
+                        });
+                    }
+                    break;
+            }
+        }
     },
     mounted() {
         axios.get('https://flynn.boolean.careers/exercises/api/array/music')
